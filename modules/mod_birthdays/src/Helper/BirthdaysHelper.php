@@ -54,7 +54,7 @@ class BirthdaysHelper
                             YEAR(CURDATE()) - YEAR(`birthday`) + 1
                     END AS `next_age`
                 FROM 
-                    `xfdf1_birthdays`
+                    `#__birthdays`
                 ORDER BY 
                     CASE
                         WHEN DATE_FORMAT(`birthday`, '%m-%d') >= DATE_FORMAT(CURDATE(), '%m-%d') THEN DATE_FORMAT(`birthday`, '%m-%d')
